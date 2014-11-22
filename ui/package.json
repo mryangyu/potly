@@ -1,6 +1,6 @@
 {
-  "name": "kitchen",
-  "description": "Main website for KitchenMate.com!",
+  "name": "potly",
+  "description": "Main app for Potly!",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
@@ -43,7 +43,7 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:kitchenmate/kitchen.git"
+    "url": "git@github.com:mryangyu/potly.git"
   },
   "author": "Yang Yu",
   "license": "BSD-2-Clause"
