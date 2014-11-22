@@ -1,0 +1,50 @@
+$margin-xs: 3px;
+$margin-sm: 8px;
+$margin-md: 15px;
+$margin-lg: $margin-md * 2;
+
+$default-margin: $margin-md;
+
+$nav-bar-height: 60px;
+
+$xs-height: 32px;
+
+$sm-height: 48px;
+
+$md-height: 64px;
+
+$lg-height: 96px;
+
+$xl-height: 125px;
+
+$navbar-height: 50px;
+
+$footer-height: 30px;
+
+$navbar-z-index: 1050;
+
+$header-height: 66px;
+
+.constrain {
+	max-width: 500px;
+	&.thin {
+		max-width: 360px;
+	}
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.margin-xs {
+	margin: $margin-xs;
+}
+
+.margin-md {
+	margin: $margin-md;
+}
+
+.margin-lg {
+	margin: $margin-lg;
+}

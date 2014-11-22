@@ -1,0 +1,9 @@
+.clock {
+	&:not(.ng-scope) {
+		display: none;
+	}
+}
+
+#loading-bar-spinner {
+	z-index: 9999;
+}

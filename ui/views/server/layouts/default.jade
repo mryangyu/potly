@@ -1,0 +1,42 @@
+doctype html
+html#ng-app(lang='en' ng-app='#{env.site_name}' xmlns:ng="http://angularjs.org")
+	head(include-append='tmpl/_seo.html')
+		title(ng-bind="seo.params.title")
+
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0')
+		meta(name="fragment", content="!")
+		//- Special tags
+		meta(content='True', name='HandheldFriendly')
+		meta(content='320', name='MobileOptimized')
+		meta(content='yes', name='apple-mobile-web-app-capable')
+		meta(content='black', name='apple-mobile-web-app-status-bar-style')
+		meta(content='telephone=no', name='format-detection')
+		meta(content='none', http-equiv='x-rim-auto-match')
+
+		link(rel='stylesheet', type='text/css' href='/assets/css/ext.min.css?#{env.version}')
+		link(rel='stylesheet', type='text/css' href='/assets/css/app.min.css?#{env.version}')
+		link(href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css')
+	body
+		block body
+
+		//- widgets
+		if !env.isPhantom
+			include ../includes/ga
+			include ../includes/mixpanel
+	
+		script.
+			window.prerenderReady = false
+		<!--[if lt IE 9]>
+		script(type='text/javascript', src='/assets/js/old.min.js?#{env.version}')
+		<![endif]-->
+		script(type='text/javascript', src='/assets/js/ext.min.js?#{env.version}')
+
+		script
+			//- this is coming from the server in the specified environment
+			| var env = 
+			!= JSON.stringify(env) 
+		script(type='text/javascript', src='/js/conf.js')
+		script(type='text/javascript', src='/assets/js/app.min.js?#{env.version}')
+		script(type='text/javascript', src='/assets/js/tmpl.min.js?#{env.version}')
