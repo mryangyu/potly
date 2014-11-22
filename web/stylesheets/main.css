@@ -77,7 +77,7 @@
   cursor: pointer; }
 
 .text-heading {
-  font-family: "Lora", serif; }
+  font-family: "Source Sans Pro", sans-serif; }
 
 .text-upper {
   text-transform: uppercase !important; }
@@ -91,16 +91,18 @@ html {
 
 body {
   color: #212121;
-  font: 100% Georgia, "Times New Roman", Times, serif;
+  font: 100% "Source Sans Pro", sans-serif;
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 100;
   margin-bottom: 30px;
-  background-color: #fdfdfd;
-  padding-top: 66px; }
+  background-color: #dddddd; }
+  body .container {
+    width: 1100px; }
 
 h1, h2, h3 {
-  font-family: "Lora", serif;
-  text-shadow: 0px 1px rgba(1, 1, 1, 0.3); }
+  font-family: "Source Sans Pro", sans-serif;
+  text-shadow: 0px 1px rgba(1, 1, 1, 0.3);
+  font-weight: 100; }
 
 a {
   cursor: pointer; }
@@ -134,7 +136,7 @@ ul.no-bullets {
       max-width: 767px;
       min-height: 350px; } }
 .background-cover, .file-drop .preview canvas,
-.file-drop .preview .img {
+.file-drop .preview .img, #home .bg, #home .content .top {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -265,7 +267,7 @@ ul.no-bullets {
   .file-drop.nv-file-over {
     border: 2px dashed #75caeb; }
     .file-drop.nv-file-over p {
-      color: #4582ec; }
+      color: #7164ac; }
 
 .btn-file {
   cursor: pointer;
@@ -386,8 +388,8 @@ footer {
   bottom: 0;
   width: 100%;
   min-height: 30px;
-  background-color: #fdfdfd;
-  color: #212121; }
+  background-color: #595b67;
+  color: white; }
   @media (max-width: 768px) {
     footer {
       font-size: 0.8em; } }
@@ -457,23 +459,73 @@ body:not .flip-container.back > .flipper > .back {
 #loading-bar-spinner {
   z-index: 9999; }
 
+#home form {
+  margin-top: 60px; }
+  #home form .form-group {
+    margin-right: 8px; }
+  #home form .btn.btn-primary {
+    background-color: #7164ac;
+    border-color: #8778ce; }
 #home .bg {
+  background-image: url(/assets/img/boiling-pot.jpg);
   width: 100%;
-  height: 650px;
-  position: relative;
-  border-bottom: 5px solid rgba(255, 255, 255, 0.7); }
+  height: 250px;
+  position: fixed;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white; }
   @media (max-width: 768px) {
     #home .bg {
       height: 480px; } }
-#home .panel {
-  position: absolute;
-  width: 600px;
-  margin-left: -300px;
-  top: 30%;
-  left: 50%;
-  opacity: 0.9; }
-  @media (max-width: 768px) {
-    #home .panel {
-      width: 90%;
-      left: 5%;
-      margin-left: 0; } }
+#home .footer {
+  width: 100%;
+  float: left;
+  text-align: right;
+  padding: 30px;
+  background-color: #595b67;
+  color: white; }
+#home .content {
+  margin-top: 220px;
+  right: 0px;
+  position: relative; }
+  #home .content .logo {
+    width: 200px;
+    position: absolute;
+    left: 0px; }
+    #home .content .logo img {
+      width: 100%; }
+  #home .content .top {
+    background-image: url(/assets/img/stove-top.jpg);
+    background-position: 100px;
+    height: 400px;
+    width: 100%;
+    color: white;
+    padding: 30px 0px 80px 200px;
+    text-align: center;
+    font-size: 1.7em;
+    background-color: #ededed; }
+  #home .content .mid {
+    background-image: url(/assets/img/holding-phone.jpg);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-color: white;
+    height: 400px;
+    color: #bbb;
+    padding-left: 30%;
+    padding-right: 60px;
+    padding-top: 60px;
+    float: left; }
+  #home .content .bottom {
+    background-color: #6bcfcf;
+    float: left;
+    width: 100%; }
+  #home .content .feature {
+    padding: 60px;
+    text-align: center; }
+    #home .content .feature img {
+      width: 100px;
+      height: 100px; }
+    #home .content .feature h4 {
+      color: #1f7f7d; }
+    #home .content .feature p {
+      color: white; }

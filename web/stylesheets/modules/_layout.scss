@@ -17,12 +17,16 @@ body {
 	font-weight: $font-weight;
 	margin-bottom: $footer-height;
 	background-color: $background-color;
-	padding-top: $header-height;
+
+	.container {
+		width: $container-width;
+	}
 }
 
 h1, h2, h3 {
 	font-family: $heading-font-stack;
 	text-shadow: $emboss-text-shadow;
+	font-weight: $font-weight;
 }
 
 a {

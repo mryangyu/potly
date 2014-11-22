@@ -23,6 +23,7 @@ body {
 h1, h2, h3 {
 	font-family: $heading-font-stack;
 	text-shadow: $emboss-text-shadow;
+	font-weight: $font-weight;
 }
 
 a {

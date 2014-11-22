@@ -138,7 +138,7 @@ module.exports = (grunt) ->
 				tasks: ['coffee', 'uglify:app']
 
 			views:
-				files: ['views/client/**/*.jgade']
+				files: ['views/client/**/*.jade']
 				tasks: ['jade', 'ngtemplates', 'uglify:tmpl']
 
 			express:
