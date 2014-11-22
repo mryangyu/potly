@@ -17,7 +17,6 @@ development: &defaults
     contact:
       email: 'support@potly.com'
       phone_number: '18000000000'
-      twitter: KitchenMate
     ui: &defaultUI
       timeout: 30000
       page_size: 30
