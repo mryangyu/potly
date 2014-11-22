@@ -14,11 +14,6 @@ app.set "views", path.join(__dirname, "views")
 
 app.use compress()
 
-if conf.prerender_token?
-	app.use require('prerender-node').set('prerenderToken', conf.prerender_token)
-else if conf.endpoints.seo?
-	app.use require("prerender-node").set('prerenderServiceUrl', conf.endpoints.seo)
-
 # app.use favicon(path.join(__dirname, "public/assets/img/favicon.png"))
 app.use express.static(path.join(__dirname, "public"),
 	maxAge: conf.cache.assets.age

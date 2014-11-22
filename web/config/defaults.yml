@@ -12,6 +12,8 @@ development: &defaults
     site_name: 'StoveAlert'
     name: StoveAlert
     upload_limit: 10
+    console: 
+      debug: true
     contact:
       email: 'support@potly.com'
       phone_number: '18000000000'
@@ -25,6 +27,10 @@ production: &production
   <<: *defaults
   env: production
   sitemap: true
+  app:
+    <<: *defaultApp
+    console: 
+      debug: false
   public_keys:
     <<: *defaultPublicKeys
     mixpanel: 2ff282bfcb986f5872e621848a79a7dc
