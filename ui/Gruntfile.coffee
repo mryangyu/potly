@@ -90,12 +90,6 @@ module.exports = (grunt) ->
 				mangle: false
 				compress:
 					drop_console: false #TODO turn to true in prod
-			old:
-				files:
-					'public/assets/js/old.min.js': [
-						'bower_components/es5-shim/es5-shim.js'
-						'bower_components/html5shiv/dist/html5shiv.js'
-					]
 			ext:
 				files:
 					'public/assets/js/ext.min.js': [
