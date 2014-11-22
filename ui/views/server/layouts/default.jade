@@ -1,7 +1,7 @@
 doctype html
 html#ng-app(lang='en' ng-app='#{env.site_name}' xmlns:ng="http://angularjs.org")
-	head(include-append='tmpl/_seo.html')
-		title(ng-bind="seo.params.title")
+	head
+		title(ng-bind="app.site_name")
 
 		meta(charset="utf-8")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -17,17 +17,8 @@ html#ng-app(lang='en' ng-app='#{env.site_name}' xmlns:ng="http://angularjs.org")
 
 		link(rel='stylesheet', type='text/css' href='/assets/css/ext.min.css?#{env.version}')
 		link(rel='stylesheet', type='text/css' href='/assets/css/app.min.css?#{env.version}')
-		link(href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css')
 	body
 		block body
-
-		//- widgets
-		if !env.isPhantom
-			include ../includes/ga
-			include ../includes/mixpanel
-	
-		script.
-			window.prerenderReady = false
 		<!--[if lt IE 9]>
 		script(type='text/javascript', src='/assets/js/old.min.js?#{env.version}')
 		<![endif]-->

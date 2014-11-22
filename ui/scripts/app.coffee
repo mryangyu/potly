@@ -25,37 +25,12 @@ app.config (cfpLoadingBarProvider) ->
 # app.constant 'angularMomentConfig',
 # 	preprocess: 'utc'
 
-app.run ($rootScope, $location, $routeParams, $window, $http, $templateCache, $filter, $log, Navigation, Layout, SEO, GoogleAnalyticsService, MixpanelService) ->
+app.run ($rootScope, $location, $routeParams, $window, $http, $templateCache, $filter, $log) ->
 	FastClick.attach document.body
 	$log.info 'App loaded'
 	
 	$rootScope.env = env
 	$rootScope.conf = conf
-	$rootScope.nav = new Navigation()
-	$rootScope.layout = new Layout()
-	$rootScope.seo = new SEO()
-
-	$rootScope.authUserIs = (type = "") ->
-		return false unless $rootScope.authUser? and type.length
-		return $rootScope.authUser.account.type in type.split("|")
-
-	$rootScope.authenticated = (authUser, source) ->
-		return unless authUser?
-		$log.info 'authenticated:', authUser.id
-		$rootScope.authUser = authUser
-		GoogleAnalyticsService.setUser(authUser)
-		MixpanelService.setUser(authUser, source)
-
-		return
-
-	$rootScope.deauthenticate = (options={}) ->
-		$rootScope.authUser = null
-		$rootScope.nav.history = [] if options.clearHistory
-		return
-
-	$rootScope.processHeaders = (headerGetter) ->
-		# TODO:
-		return
 
 	$rootScope.isBinding = ->
 		$rootScope.$$phase in ["$apply", "$digest"]

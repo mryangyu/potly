@@ -20,9 +20,9 @@ else if conf.endpoints.seo?
 	app.use require("prerender-node").set('prerenderServiceUrl', conf.endpoints.seo)
 
 # app.use favicon(path.join(__dirname, "public/assets/img/favicon.png"))
-# app.use express.static(path.join(__dirname, "public"),
-# 	maxAge: conf.cache.assets.age
-# )
+app.use express.static(path.join(__dirname, "public"),
+	maxAge: conf.cache.assets.age
+)
 
 require("./routes") app
 

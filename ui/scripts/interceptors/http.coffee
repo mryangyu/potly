@@ -1,4 +1,4 @@
-app.factory 'opHttp', ($q, $log, $location, $rootScope, $window, GoogleAnalyticsService, MixpanelService, Alert, Confirm) ->
+app.factory 'opHttp', ($q, $log, $location, $rootScope, $window) ->
 
 	timeout = conf.app.ui.timeout
 	request: (config) ->
