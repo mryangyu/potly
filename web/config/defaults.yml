@@ -1,6 +1,6 @@
 development: &defaults
   env: development
-  port: 5001
+  port: 5002
   endpoints: 
     ui: http://localhost:5001
     embed: http://localhost:5000

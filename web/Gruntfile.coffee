@@ -12,7 +12,7 @@ module.exports = (grunt) ->
 				options:
 					script: 'server.js'
 					args: ['--local']
-					port: 5001 # warning, do not use conf for this as it preloads before ENV
+					port: 5002 # warning, do not use conf for this as it preloads before ENV
 
 		copy:
 			dist: 
