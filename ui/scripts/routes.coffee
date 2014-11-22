@@ -9,6 +9,24 @@ app.config ($routeProvider, $locationProvider, $httpProvider) ->
 			controller: 'HomeCtrl'
 			templateUrl: 'tmpl/home.html'
 
+		.when '/alerts', 
+			title: 'Alerts'
+			controller: 'AlertsCtrl'
+			templateUrl: 'tmpl/alerts.html'
+
+		.when '/dashboard', 
+			title: 'Dashboard'
+			controller: 'DashboardCtrl'
+			templateUrl: 'tmpl/dashboard.html'
+
+		.when '/settings', 
+			title: 'Settings'
+			controller: 'SettingsCtrl'
+			templateUrl: 'tmpl/settings.html'
+
+		.otherwise
+			redirectTo: '/'
+			
 	$locationProvider
 		.html5Mode(enabled: true, requireBase: false)
 		.hashPrefix('!')
