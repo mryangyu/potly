@@ -1,0 +1,50 @@
+{
+  "name": "potly",
+  "description": "Main app for Potly!",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.x",
+    "coffee-script": "1.7.1",
+    "colors": "0.6.2",
+    "js-yaml": "3.1.0",
+    "jade": "1.5.0",
+    "request": "~2.40.0",
+    "compression": "^1.0.11",
+    "errorhandler": "^1.1.1",
+    "serve-favicon": "^2.0.1",
+    "superagent": "~0.18.2",
+    "memoizee": "^0.3.7",
+    "sitemap": "~0.7.4",
+    "moment": "~2.8.1",
+    "lodash": "~2.4.1",
+    "prerender-node": "~1.0.5",
+    "tough-cookie": "^0.12.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-sass": "~0.7.4",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-env": "0.4.1",
+    "grunt-express-server": "0.4.19",
+    "requestify": "0.1.x",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-coffee": "^0.11.1",
+    "grunt-contrib-jade": "^0.12.0",
+    "grunt-angular-templates": "^0.5.7",
+    "request": "~2.40.0",
+    "xml2js": "~0.4.4"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mryangyu/potly.git"
+  },
+  "author": "Yang Yu",
+  "license": "BSD-2-Clause"
+}

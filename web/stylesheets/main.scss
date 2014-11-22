@@ -1,0 +1,34 @@
+// Mixins library
+@import "../bower_components/bourbon/dist/bourbon";
+
+@import "modules/all";
+@import "mixins/all";
+
+@import "ext/angular";
+
+#home {
+	.bg {
+		width: 100%;
+		height: 650px;
+		position: relative;
+		border-bottom: 5px solid rgba(255,255,255,0.7);
+		@media (max-width: 768px) {
+			height: 480px;
+		}
+	}
+
+	.panel {
+		position: absolute;
+		width: 600px;
+		margin-left: -300px;
+		top: 30%;
+		left: 50%;
+		opacity: 0.9;
+
+		@media (max-width: 768px) {
+			width: 90%;
+			left: 5%;
+			margin-left: 0;
+		}
+	}
+}

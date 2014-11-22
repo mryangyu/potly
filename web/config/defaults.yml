@@ -1,0 +1,26 @@
+development: &defaults
+  env: development
+  port: 5001
+  endpoints: 
+    ui: http://localhost:5001
+    embed: http://localhost:5000
+  cache:
+    assets:
+      age: 86400000 # 1000 * 60 * 60 * 24
+  sitemap: true
+  app: &defaultApp
+    site_name: 'Potly'
+    name: Potly
+    upload_limit: 10
+    console: 
+      debug: true
+    contact:
+      email: 'support@potly.com'
+      phone_number: '18000000000'
+    ui: &defaultUI
+      timeout: 30000
+      page_size: 30
+      leave_warning: true
+  public_keys: &defaultPublicKeys
+    ga: UA-56702618-2
+    mixpanel: c923e5cf9e4f2fbb958293329d5ceac1

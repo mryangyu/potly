@@ -1,0 +1,48 @@
+/* http://davidwalsh.name/css-flip
+/* entire container, keeps perspective */
+body {
+	&:not {
+		.flip-container {
+			> .flipper {
+				@include perspective(1000px);
+				position: relative;
+				width: 100%;
+				height: 100%;
+
+				> .front, 
+				> .back {
+					@include transition(all $transition-speed * 2 ease-in-out);
+					@include transform-style(preserve-3d);
+					@include backface-visibility(hidden);
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
+
+				> .front {
+					position: relative;
+				}
+
+				> .back {
+					@include transform(rotateY(180deg));
+					position: absolute;
+				}
+			}
+
+			&.back {
+				> .flipper {
+					> .front {
+						@include transform(rotateY(-180deg));
+						position: absolute;
+					}
+
+					> .back {
+						@include transform(rotateY(0deg));
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+}
