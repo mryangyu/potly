@@ -9,11 +9,9 @@ development: &defaults
       age: 86400000 # 1000 * 60 * 60 * 24
   sitemap: true
   app: &defaultApp
-    site_name: 'Potly'
-    name: Potly
+    site_name: 'StoveAlert'
+    name: StoveAlert
     upload_limit: 10
-    console: 
-      debug: true
     contact:
       email: 'support@potly.com'
       phone_number: '18000000000'
@@ -22,5 +20,13 @@ development: &defaults
       page_size: 30
       leave_warning: true
   public_keys: &defaultPublicKeys
-    ga: UA-56702618-2
     mixpanel: c923e5cf9e4f2fbb958293329d5ceac1
+production: &production
+  <<: *defaults
+  env: production
+  sitemap: true
+  public_keys:
+    <<: *defaultPublicKeys
+    mixpanel: 2ff282bfcb986f5872e621848a79a7dc
+kitchen-prod:
+  <<: *production

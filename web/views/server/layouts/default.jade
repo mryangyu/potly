@@ -18,23 +18,7 @@ html#ng-app(lang='en' ng-app='#{env.site_name}' xmlns:ng="http://angularjs.org")
 		link(rel='stylesheet', type='text/css' href='/assets/css/ext.min.css?#{env.version}')
 		link(rel='stylesheet', type='text/css' href='/assets/css/app.min.css?#{env.version}')
 	body
-		nav.navbar.navbar-fixed-top.navbar-default(ng-hide='hide_header')
-			.container
-				.navbar-header
-					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-						span.sr-only Toggle navigation
-						span.fa.fa-bars
-					a.navbar-brand.logo(ng-href='/') 
-						img(ng-src='/assets/img/potly-logo.jpg', alt="{{::conf.app.site_name}}")
-				.collapse.navbar-collapse
-					ul.nav.navbar-nav.navbar-right
-						li
-							a(ng-href='/alerts', title='Alerts')
-								| &nbsp;Alerts
-						li
-							a(ng-href='/settings', title='Settings')
-								| &nbsp;Settings
-		block body			
+		block body
 
 		script(type='text/javascript', src='/assets/js/ext.min.js?#{env.version}')
 
