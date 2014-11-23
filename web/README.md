@@ -1,4 +1,0 @@
-Potly
----
-
-Hello World!
